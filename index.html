@@ -46,179 +46,6 @@
       color: #776e65;
     }
 
-    .scores {
-      display: flex;
-      gap: 10px;
-    }
-
-    .score-box {
-      background: #bbada0;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-align: center;
-      min-width: 80px;
-    }
-
-    .score-box .label {
-      font-size: 0.7em;
-      text-transform: uppercase;
-      opacity: 0.8;
-    }
-
-    .score-box .value {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    .controls {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      background: #8f7a66;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: bold;
-      transition: all 0.2s;
-    }
-
-    .btn:hover {
-      background: #9f8b77;
-      transform: scale(1.05);
-    }
-
-    .game-2048 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .grid-2048 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-      gap: 10px;
-      background: #bbada0;
-      padding: 10px;
-      border-radius: 10px;
-      width: 100%;
-      aspect-ratio: 1;
-    }
-
-    .tile {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2.5em;
-      font-weight: bold;
-      border-radius: 5px;
-      background: rgba(238, 228, 218, 0.35);
-      color: #776e65;
-      transition: all 0.15s ease;
-    }
-
-    .tile-2 { background: #eee4da; }
-    .tile-4 { background: #ede0c8; }
-    .tile-8 { background: #f2b179; color: #f9f6f2; }
-    .tile-16 { background: #f59563; color: #f9f6f2; }
-    .tile-32 { background: #f67c5f; color: #f9f6f2; }
-    .tile-64 { background: #f65e3b; color: #f9f6f2; }
-    .tile-128 { background: #edcf72; color: #f9f6f2; font-size: 2em; }
-    .tile-256 { background: #edcc61; color: #f9f6f2; font-size: 2em; }
-    .tile-512 { background: #edc850; color: #f9f6f2; font-size: 2em; }
-    .tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 1.5em; }
-    .tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 1.5em; }
-    .tile-super { background: #3c3a32; color: #f9f6f2; font-size: 1.2em; }
-
-    .new-tile {
-      animation: pop 0.2s ease;
-    }
-
-    @keyframes pop {
-      0% { transform: scale(0); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    .merged-tile {
-      animation: merge 0.2s ease;
-    }
-
-    @keyframes merge {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-
-    .instructions {
-      margin-top: 20px;
-      color: #776e65;
-      text-align: center;
-      font-size: 0.95em;
-      line-height: 1.6;
-    }
-
-    .game-over {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-    }
-
-    .game-over.show {
-      display: flex;
-    }
-
-    .game-over-content {
-      background: #faf8ef;
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    }
-
-    .game-over h2 {
-      font-size: 2.5em;
-      color: #776e65;
-      margin-bottom: 20px;
-    }
-
-    .game-over p {
-      font-size: 1.2em;
-      color: #776e65;
-      margin-bottom: 20px;
-    }
-
-    .win {
-      color: #edc22e !important;
-    }
-
-    @media (max-width: 500px) {
-      .title { font-size: 2.5em; }
-      .tile { font-size: 1.8em; }
-      .tile-128, .tile-256, .tile-512 { font-size: 1.5em; }
-      .tile-1024, .tile-2048 { font-size: 1.2em; }
-      .tile-super { font-size: 1em; }
-      .score-box { padding: 8px 12px; min-width: 70px; }
-      .score-box .value { font-size: 1.2em; }
-    }
-
-
     /* ======= ly云手机自定义块样式 ======= */
     .section-block {
       background: #faf8ef;
@@ -250,21 +77,29 @@
       text-decoration: underline;
     }
 
+    /* 修改按钮样式 - 提高对比度 */
     .button-link {
       display: inline-block;
-      background: #8f7a66;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin: 10px 0;
+      background: #1a5fb4; /* 改为深蓝色背景 */
+      color: white; /* 白色文字 */
+      padding: 12px 24px;
+      border-radius: 10px;
+      margin: 10px 5px 10px 0;
       text-align: center;
       font-weight: bold;
-      transition: all 0.2s;
+      font-size: 1em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid #1a5fb4;
+      box-shadow: 0 4px 8px rgba(26, 95, 180, 0.2);
     }
 
     .button-link:hover {
-      background: #9f8b77;
-      transform: scale(1.05);
+      background: white;
+      color: #1a5fb4;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(26, 95, 180, 0.3);
+      border-color: #1a5fb4;
     }
 
     .notice {
@@ -280,6 +115,16 @@
       height: 6px;
       display: block;
       margin: 5px 0;
+    }
+
+    @media (max-width: 500px) {
+      .title { font-size: 2.5em; }
+      .button-link {
+        padding: 10px 18px;
+        font-size: 0.95em;
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -328,18 +173,6 @@
       <div class="block-content">
         <h4 style="color: #edc22e; margin: 12px 0 6px;">1. 如何使用远程控制精灵？</h4>
         <p>首先，请在目标设备的屏幕上找到远程控制精灵的二维码。然后，在您的电脑或手机上打开远程控制精灵客户端，扫描该二维码将其添加到远程列表。添加成功后，即可发起远程连接。</p>
-        
-        <h4 style="color: #edc22e; margin: 12px 0 6px;">2. 计算器功能支持哪些运算？</h4>
-        <p>基础计算器支持加、减、乘、除四则运算。在“扩展功能区”的科学计算器中，您可以执行更复杂的数学运算，如三角函数 (sin, cos)、对数 (log) 和指数等。</p>
-        
-        <h4 style="color: #edc22e; margin: 12px 0 6px;">3. 工作清单的数据会丢失吗？</h4>
-        <p>不会。您的工作清单数据会保存在浏览器的本地存储 (LocalStorage) 中。只要您不清除浏览器缓存，数据就会一直保留，即使关闭浏览器再重新打开也是如此。</p>
-        
-        <h4 style="color: #edc22e; margin: 12px 0 6px;">4. 天气功能为什么显示“暂无天气数据”？</h4>
-        <p>当前版本的天气功能是一个占位符，需要接入第三方天气 API 才能显示真实数据。我们计划在未来的更新中完善此功能。</p>
-        
-        <h4 style="color: #edc22e; margin: 12px 0 6px;">5. 如何反馈问题或建议？</h4>
-        <p>由于这是一个静态网页，暂时没有内置的反馈系统。您可以通过您获得此链接的渠道向我们反馈，我们会认真考虑每一条建议。</p>
       </div>
     </div>
 
@@ -359,8 +192,8 @@
       <div class="block-title">👤 关于我</div>
       <div class="block-content">
         <p>欢迎来到 ly云手机 站点。我是本站的创建与维护者，热爱技术、工具分享与效率提升。</p>
-        <p>本网站集合了多种实用小工具，方便日常使用与远程设备管理。我希望通过这个平台，让复杂的操作变得简单，让工具真正服务于人。</p>
-        <p>如果你喜欢这里的内容，欢迎常来看看，也欢迎通过联系方式页面与我交流。</p>
+        <p>本网站主要提供远程设备管理的相关信息与支持，帮助用户更方便地使用远程控制精灵进行设备管理。</p>
+        <p>如果你对远程设备管理有任何疑问或需要帮助，欢迎常来看看，也欢迎通过联系方式页面与我交流。</p>
       </div>
     </div>
 
